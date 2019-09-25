@@ -1,0 +1,18 @@
+xset -b
+
+# Volume control in system tray
+(sleep 3s && volumeicon) &
+
+# Nitrogen wallpaper
+(sleep 3s && nitrogen --restore) &
+
+# clipit
+(sleep 3s && clipit) &
+
+# Show system tray
+(sleep 3s && tint2) &
+
+# NetworkManager
+(sleep 3s && nm-applet) &
+
+
