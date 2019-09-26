@@ -1,8 +1,7 @@
 xset -b
 
-# Volume control in system tray
-(sleep 3s && volumeicon) &
-#(sleep 1s && start-pulseaudio-x11 && sleep 2s && volumeicon) &
+# Volume control and pulseaudio daemon in system tray
+(sleep 1s && start-pulseaudio-x11 && sleep 2s && volumeicon) &
 
 # Nitrogen wallpaper
 (sleep 3s && nitrogen --restore) &
