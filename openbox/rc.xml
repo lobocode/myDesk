@@ -340,9 +340,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Synapse</name>
+          <name>rofi</name>
         </startupnotify>
-        <command>synapse</command>
+        <command>rofi -show run</command>
       </action>
     </keybind>
     <!-- PCmanFM -->

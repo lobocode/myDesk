@@ -189,6 +189,23 @@ mouse_scroll_up = toggle
 mouse_scroll_down = iconify
 
 #-------------------------------------
+# Button 1
+button = new
+button_icon = /home/lobo/.config/tint2/lobo/icons/lobo.png
+button_text = 
+button_lclick_command = rofi-apps
+button_rclick_command = 
+button_mclick_command = 
+button_uwheel_command = 
+button_dwheel_command = 
+button_font_color = #000000 100
+button_padding = 0 0
+button_background_id = 1
+button_centered = 0
+button_max_icon_size = 0
+
+
+#-------------------------------------
 # System tray (notification area)
 systray_padding = 7 0 5
 systray_background_id = 8
@@ -210,17 +227,17 @@ startup_notifications = 1
 launcher_tooltip = 1
 launcher_item_app = /usr/share/applications/terminator.desktop
 launcher_item_app = /usr/share/applications/firefox.desktop
-launcher_item_app = /usr/share/applications/exo-file-manager.desktop
+launcher_item_app = /usr/share/applications/pcmanfm.desktop
 launcher_item_app = /usr/share/applications/code.desktop
 
 #-------------------------------------
 # Clock
 time1_format = %I:%M %d %b
 time2_format = 
-time1_font = Ubuntu Condensed Bold 13
+time1_font = Monospace Bold 13
 time1_timezone = 
 time2_timezone = 
-time2_font = Ubuntu Condensed Bold 10
+time2_font = Monospace Bold 10
 clock_font_color = #ffffff 100
 clock_padding = 6 0
 clock_background_id = 8
@@ -238,8 +255,8 @@ battery_tooltip = 1
 battery_low_status = 20
 battery_low_cmd = notify-send "Battery Low !"
 battery_full_cmd = 
-bat1_font = Ubuntu Condensed Bold 12
-bat2_font = Ubuntu Condensed Regular 0
+bat1_font = Monospace Bold 12
+bat2_font = Monospace 0
 battery_font_color = #ffffff 100
 bat1_format = 
 bat2_format = 
