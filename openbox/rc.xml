@@ -355,7 +355,7 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-    <!-- Emergency hotkey -->
+    <!-- Emergency hotkey 
     <keybind key="C-A-x">
       <action name="Execute">
         <startupnotify>
@@ -364,7 +364,7 @@
         </startupnotify>
         <command>pkill google-chrome-stable</command>
       </action>
-    </keybind>
+    </keybind> -->
     <!-- X-lock -->
     <keybind key="A-C-l">
       <action name="Execute">

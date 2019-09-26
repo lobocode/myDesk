@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
 echo -e "\n Install dependencies\n"
-sudo $1 -y install "pcmanfm openbox synapse leafpad terminator"
+
+if [ -f /etc/redhat-release ]; then
+    sudo yum -y install "pcmanfm-qt openbox synapse leafpad terminator tint2 nitrogen xlockmore clipit obconf-qt"
+fi
 
 if [ ! -z $"USER" ] ; then
     echo -e "\n|----------------------------------------------------|\n"
@@ -11,3 +14,6 @@ if [ ! -z $"USER" ] ; then
     echo -e "\n Install myDesk themes config\n"
     cp -R themes/ /home/$USER/.themes/
 fi
+
+# Download wallpapers
+#wget -c url > path

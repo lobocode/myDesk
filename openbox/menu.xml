@@ -41,6 +41,23 @@
             </item>
         </menu>
         <separator/>
+         <menu id="Games" label="Games">
+            <item label="StarcraftII">
+                <action name="Execute">
+                    <execute>
+                        /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=starcraft2 --file-forwarding com.blizzard.StarCraft2 @@u %U @@
+                    </execute>
+                </action>
+            </item>
+            <item label="0ad">
+                <action name="Execute">
+                    <execute>
+                        0ad
+                    </execute>
+                </action>
+            </item>
+        </menu>       
+        <separator/>
         <item label="Exit">
             <action name="Execute">
                 <execute>

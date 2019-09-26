@@ -2,6 +2,7 @@ xset -b
 
 # Volume control in system tray
 (sleep 3s && volumeicon) &
+#(sleep 1s && start-pulseaudio-x11 && sleep 2s && volumeicon) &
 
 # Nitrogen wallpaper
 (sleep 3s && nitrogen --restore) &
@@ -9,10 +10,15 @@ xset -b
 # clipit
 (sleep 3s && clipit) &
 
+# Disable touchpad
+synclient TouchpadOff=0
+
 # Show system tray
 (sleep 3s && tint2) &
 
 # NetworkManager
 (sleep 3s && nm-applet) &
 
+# Set resolution
+#xrandr --size 1366x768 &
 
