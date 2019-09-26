@@ -3,7 +3,7 @@
 echo -e "\n Install dependencies\n"
 
 if [ -f /etc/redhat-release ]; then
-    sudo yum -y install "pcmanfm-qt openbox synapse leafpad terminator tint2 nitrogen xlockmore clipit obconf-qt"
+    sudo yum install "orage pcmanfm-qt openbox synapse leafpad terminator tint2 nitrogen xlockmore clipit obconf-qt"
 fi
 
 if [ ! -z $"USER" ] ; then
