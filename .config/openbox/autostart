@@ -21,3 +21,6 @@ synclient TouchpadOff=0
 # Set resolution
 #xrandr --size 1366x768 &
 
+# Init xpad
+(sleep 2s && xpad) & 
+

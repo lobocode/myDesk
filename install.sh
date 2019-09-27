@@ -7,7 +7,7 @@ echo -e "\n Install dependencies\n"
 
 # Fedora
 if [ $lsb_dist == "fedora" ]; then
-    sudo yum install "zsh rofi lxappearance orage pcmanfm openbox leafpad terminator tint2 nitrogen xlockmore clipit obconf"
+    sudo yum install "zsh rofi lxappearance orage pcmanfm openbox leafpad terminator tint2 nitrogen xlockmore clipit obconf xpad"
 fi
 
 # CentOs
@@ -22,6 +22,7 @@ fi
 #nitrogen
 #lxappearance
 #clipit
+#xpad
 
 if [ ! -z $"USER" ] ; then
     echo -e "\n|----------------------------------------------------|\n"
