@@ -265,13 +265,14 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
+    <!-- Rofi -->
     <keybind key="A-Tab">
-      <action name="NextWindow">
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Rofi</name>
+        </startupnotify>
+        <command>rofi -show</command>
       </action>
     </keybind>
     <keybind key="A-S-Tab">
@@ -335,12 +336,12 @@
         <command>leafpad</command>
       </action>
     </keybind>
-    <!-- Synapse -->
+    <!-- Rofi -->
     <keybind key="W-s">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>rofi</name>
+          <name>Rofi</name>
         </startupnotify>
         <command>rofi -show run</command>
       </action>
@@ -355,7 +356,7 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-    <!-- Emergency hotkey 
+    <!-- Emergency hotkey -->
     <keybind key="C-A-x">
       <action name="Execute">
         <startupnotify>
@@ -364,7 +365,7 @@
         </startupnotify>
         <command>pkill google-chrome-stable</command>
       </action>
-    </keybind> -->
+    </keybind>
     <!-- X-lock -->
     <keybind key="A-C-l">
       <action name="Execute">
