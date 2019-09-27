@@ -7,12 +7,12 @@ echo -e "\n Install dependencies\n"
 
 # Fedora
 if [ $lsb_dist == "fedora" ]; then
-    sudo yum install "zsh rofi lxappearance orage pcmanfm openbox leafpad terminator tint2 nitrogen xlockmore clipit obconf xpad"
+    sudo yum install "zsh rofi htop lxappearance orage pcmanfm openbox leafpad terminator tint2 nitrogen xlockmore clipit obconf xpad mpv xpdf shutter p7zip gimp inkscape"
 fi
 
 # CentOs
 if [ $lsb_dist == "centos" ]; then
-    sudo yum install "zsh orage pcmanfm-qt openbox terminator tint2 xlockmore obconf-qt"
+    sudo yum install "zsh htop orage pcmanfm-qt openbox terminator tint2 xlockmore obconf-qt mpv xpdf p7zip gimp inkscape"
     # Install rofi
     sudo yum install centos/rofi-0.15.12-1.el7.centos.x86_64.rpm
 fi
@@ -23,6 +23,7 @@ fi
 #lxappearance
 #clipit
 #xpad
+#shutter
 
 if [ ! -z $"USER" ] ; then
     echo -e "\n|----------------------------------------------------|\n"
