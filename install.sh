@@ -30,11 +30,11 @@ if [ ! -z $"USER" ] ; then
     echo -e "\n Install ohMyZsh\n"
     sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
     echo -e "\n|----------------------------------------------------|\n"
-    echo -e "\n Install myDesk openbox config\n"
-    cp -R openbox/ /home/$USER/.config/
+    echo -e "\n Install myDesk config\n"
+    \cp -a .config/* /home/$USER/.config/
     echo -e "\n|----------------------------------------------------|\n"
     echo -e "\n Install myDesk themes config\n"
-    cp -R themes/ /home/$USER/.themes/
+    \cp -a themes/* /home/$USER/.themes/
 
 fi
 
