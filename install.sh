@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# What distribution
 lsb_dist="$(. /etc/os-release && echo "$ID")"
 
 echo -e "\n Install dependencies\n"
@@ -16,6 +17,7 @@ if [ $lsb_dist == "centos" ]; then
     sudo yum install centos/rofi-0.15.12-1.el7.centos.x86_64.rpm
 fi
 
+# I need to find packages, versions or alternatives of these for centos.
 #leafpad
 #nitrogen
 #lxappearance
