@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Lime Night</name>
+    <name>lobox</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -266,15 +266,15 @@
     </keybind>
     <!-- Keybindings for window switching -->
     <!-- Rofi -->
-    <keybind key="A-Tab">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Rofi</name>
-        </startupnotify>
-        <command>rofi -show</command>
-      </action>
-    </keybind>
+  <keybind key="A-Tab">
+    <action name="NextWindow">
+      <finalactions>
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </finalactions>
+    </action>
+  </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
         <finalactions>
@@ -331,9 +331,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Leafpad</name>
+          <name>mousepad</name>
         </startupnotify>
-        <command>leafpad</command>
+        <command>mousepad</command>
       </action>
     </keybind>
     <!-- Rofi -->
@@ -351,12 +351,12 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>pcmanfm</name>
+          <name>pcmanfm-qt</name>
         </startupnotify>
-        <command>pcmanfm</command>
+        <command>pcmanfm-qt</command>
       </action>
     </keybind>
-    <!-- Emergency hotkey -->
+    <!-- Emergency hotkey 
     <keybind key="C-A-x">
       <action name="Execute">
         <startupnotify>
@@ -365,13 +365,13 @@
         </startupnotify>
         <command>pkill google-chrome-stable</command>
       </action>
-    </keybind>
+    </keybind> -->
     <!-- X-lock -->
     <keybind key="A-C-l">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>pcmanfm</name>
+          <name>xlockmore</name>
         </startupnotify>
         <command>xlock -mousemotion +description -mode blank -bg black -fg grey30</command>
       </action>

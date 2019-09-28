@@ -12,14 +12,12 @@ fi
 
 # CentOs
 if [ $lsb_dist == "centos" ]; then
-    sudo yum install "zsh htop orage pcmanfm-qt openbox terminator tint2 xlockmore obconf-qt mpv xpdf p7zip gimp inkscape"
+    sudo yum install "zsh feh obconf-qt mousepad htop orage pcmanfm-qt openbox terminator tint2 xlockmore obconf-qt mpv xpdf p7zip gimp inkscape"
     # Install rofi
     sudo yum install centos/rofi-0.15.12-1.el7.centos.x86_64.rpm
 fi
 
 # I need to find packages, versions or alternatives of these for centos.
-#leafpad
-#nitrogen
 #lxappearance
 #clipit
 #xpad
@@ -29,6 +27,11 @@ if [ ! -z $"USER" ] ; then
     echo -e "\n|----------------------------------------------------|\n"
     echo -e "\n Install ohMyZsh\n"
     sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    echo -e "\n|----------------------------------------------------|\n"
+    echo -e "\n Install install powerline fonts\n"
+    git clone https://github.com/powerline/fonts
+    cd fonts
+    ./install.sh
     echo -e "\n|----------------------------------------------------|\n"
     echo -e "\n Install myDesk config\n"
     \cp -a .config/* /home/$USER/.config/
