@@ -7,7 +7,7 @@ echo -e "\n Install dependencies\n"
 
 # Fedora
 if [ $lsb_dist == "fedora" ]; then
-    sudo dnf install "zsh rofi htop lxappearance orage pcmanfm openbox leafpad terminator tint2 feh xlockmore clipit obconf xpad mpv xpdf shutter p7zip gimp inkscape lutris unar p7zip htop"
+    sudo dnf -y install rofi zsh htop lxappearance orage pcmanfm openbox leafpad terminator tint2 feh xlockmore obconf mpv xpdf shutter p7zip gimp inkscape lutris unar p7zip htop python2-tkinter python3-tkinter
 fi
 
 # CentOs
@@ -19,23 +19,27 @@ fi
 
 # I need to find packages, versions or alternatives of these for centos.
 
-#if [ ! -z $"USER" ] ; then
-#    echo -e "\n|----------------------------------------------------|\n"
-#    echo -e "\n Install ohMyZsh\n"
-#    sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-#    echo -e "\n|----------------------------------------------------|\n"
-#    echo -e "\n Install install powerline fonts\n"
-#    git clone https://github.com/powerline/fonts
-#    cd fonts
-#    ./install.sh
-#    echo -e "\n|----------------------------------------------------|\n"
-#    echo -e "\n Install myDesk config\n"
-#    \cp -a .config/* /home/$USER/.config/
-#    echo -e "\n|----------------------------------------------------|\n"
-#    echo -e "\n Install myDesk themes config\n"
-#    \cp -a themes/* /home/$USER/.themes/
+if [ ! -z $"USER" ]
+then
+    echo -e "\n|----------------------------------------------------|\n"
+    echo -e "\n Install ohMyZsh\n"
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-#fi
 
-# Download wallpapers
+    echo -e "\n|----------------------------------------------------|\n"
+    echo -e "\n Install myDesk config\n"
+    \cp -a .config/* /home/$USER/.config/
+    \cp -a .zshrc_config/* /home/$USER/
+
+    if  [ -d "/home/$USER/.themes" ] 
+    then
+        echo -e "\n|----------------------------------------------------|\n"
+        echo -e "\n Install myDesk themes config\n"
+        mkdir /home/$USER/.themes
+        \cp -a themes/* /home/$USER/.themes/
+    fi
+
+fi
+
+# Download wallpaper pack
 #wget -c url > path
